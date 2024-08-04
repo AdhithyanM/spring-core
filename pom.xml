@@ -12,6 +12,7 @@
         <module>spring-ioc</module>
         <module>spring-di</module>
         <module>loose-coupling</module>
+        <module>spring-autowiring-qualifier</module>
     </modules>
 
     <properties>
