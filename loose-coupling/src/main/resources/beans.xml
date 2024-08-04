@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dataService" class="com.adhithyan.loosecoupling.DataService" />
+    <bean id="helloTuneService" class="com.adhithyan.loosecoupling.HelloTuneService" />
+    <bean id="missedCallService" class="com.adhithyan.loosecoupling.MissedCallService" />
+
+    <bean id="airtel" class="com.adhithyan.loosecoupling.Airtel">
+        <constructor-arg name="service" ref="missedCallService" />
+    </bean>
+
+    <bean id="airtelWithDataService" class="com.adhithyan.loosecoupling.Airtel">
+        <constructor-arg name="service" ref="dataService" />
+    </bean>
+    <bean id="airtelWithHelloTuneService" class="com.adhithyan.loosecoupling.Airtel">
+        <constructor-arg name="service" ref="helloTuneService"/>
+    </bean>
+    <bean id="airtelWithMissedCallService" class="com.adhithyan.loosecoupling.Airtel">
+        <constructor-arg name="service" ref="missedCallService"/>
+    </bean>
+</beans>
