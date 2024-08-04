@@ -13,6 +13,7 @@
         <module>spring-di</module>
         <module>loose-coupling</module>
         <module>spring-autowiring-qualifier</module>
+        <module>spring-value-required-annotation</module>
     </modules>
 
     <properties>
